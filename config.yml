@@ -1,0 +1,14 @@
+host: localhost
+#数据库ip
+port: 3306
+#数据库端口
+database: minecraft
+#数据库的名称
+user: minecraft
+#数据库的用户名
+password: root
+#数据库的密码
+type: kills
+#起床战争排行榜的排名类型，可以是kills,wins,destroyedBeds其中一个
+delay(second): 1
+#排行榜更新延迟（单位：秒）

@@ -1,0 +1,248 @@
+[19:53:25] [Server thread/INFO]: Starting minecraft server version 1.8.8
+[19:53:25] [Server thread/WARN]: To start the server with more ram, launch it as "java -Xmx1024M -Xms1024M -jar minecraft_server.jar"
+[19:53:25] [Server thread/INFO]: Loading properties
+[19:53:25] [Server thread/INFO]: Default game type: SURVIVAL
+[19:53:26] [Server thread/INFO]: This server is running CraftBukkit version git-PaperSpigot-f6fba00-9935adc (MC: 1.8.8) (Implementing API version 1.8.8-R0.1-SNAPSHOT)
+[19:53:26] [Server thread/INFO]: Debug logging is disabled
+[19:53:26] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[19:53:26] [Server thread/INFO]: Using 4 threads for Netty based IO
+[19:53:26] [Server thread/INFO]: Data value allowed items: 
+[19:53:26] [Server thread/INFO]: Generating keypair
+[19:53:26] [Server thread/INFO]: Starting Minecraft server on *:25565
+[19:53:26] [Server thread/INFO]: Using default channel type
+[19:53:26] [Server thread/INFO]: Set PluginClassLoader as parallel capable
+[19:53:26] [Server thread/INFO]: [PermissionsEx] Loading PermissionsEx v1.23.4
+[19:53:26] [Server thread/WARN]: [PermissionsEx] This server is in offline mode. Unless this server is configured to integrate with a supported proxy (see http://dft.ba/-8ous), UUIDs *may not be stable*!
+[19:53:26] [Server thread/INFO]: [BedwarsRank] Loading BedwarsRank v1.0
+[19:53:26] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[19:53:26] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[19:53:26] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[19:53:26] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[19:53:26] [Server thread/INFO]: **** Beginning UUID conversion, this may take A LONG time ****
+[19:53:26] [Server thread/INFO]: Preparing level "world"
+[19:53:26] [Server thread/INFO]: -------- World Settings For [world] --------
+[19:53:26] [Server thread/INFO]: Item Despawn Rate: 6000
+[19:53:26] [Server thread/INFO]: Item Merge Radius: 2.5
+[19:53:26] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[19:53:26] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[19:53:26] [Server thread/INFO]: View Distance: 10
+[19:53:26] [Server thread/INFO]: Experience Merge Radius: 3.0
+[19:53:26] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[19:53:26] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[19:53:26] [Server thread/INFO]: Clear tick list: false
+[19:53:26] [Server thread/INFO]: Anti X-Ray: true
+[19:53:26] [Server thread/INFO]: 	Engine Mode: 1
+[19:53:26] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[19:53:26] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[19:53:26] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[19:53:26] [Server thread/INFO]: Mob Spawn Range: 4
+[19:53:26] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[19:53:26] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: Cane Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: Melon Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[19:53:26] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[19:53:26] [Server thread/INFO]: Random Lighting Updates: false
+[19:53:26] [Server thread/INFO]: Structure Info Saving: true
+[19:53:26] [Server thread/INFO]: Sending up to 10 chunks per packet
+[19:53:26] [Server thread/INFO]: Max TNT Explosions: 100
+[19:53:26] [Server thread/INFO]: Max Entity Collisions: 8
+[19:53:26] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[19:53:26] [Server thread/INFO]: -------- World Settings For [world] --------
+[19:53:26] [Server thread/INFO]: Fix TNT cannons: false
+[19:53:26] [Server thread/INFO]: Water over lava flow speed: 5
+[19:53:26] [Server thread/INFO]: Allow undead horse types to be leashed: false
+[19:53:26] [Server thread/INFO]: Keep spawn chunk loaded: true
+[19:53:26] [Server thread/INFO]: World async lighting: false
+[19:53:26] [Server thread/INFO]: WorldServer TickNextTick cap set at 10000
+[19:53:26] [Server thread/INFO]: WorldServer TickNextTickList cap always processes redstone: false
+[19:53:26] [Server thread/INFO]: Max height for cactus growth 3. Max height for reed growth 3
+[19:53:26] [Server thread/INFO]: Remove invalid mob spawner tile entities: true
+[19:53:26] [Server thread/INFO]: Player blocking damage multiplier set to 0.5
+[19:53:26] [Server thread/INFO]: Squids will spawn between Y: 45.0 and Y: 63.0
+[19:53:26] [Server thread/INFO]: Living Entity Despawn Ranges:  Soft: 32 Hard: 128
+[19:53:26] [Server thread/INFO]: -------- World Settings For [world_nether] --------
+[19:53:26] [Server thread/INFO]: Item Despawn Rate: 6000
+[19:53:26] [Server thread/INFO]: Item Merge Radius: 2.5
+[19:53:26] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[19:53:26] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[19:53:26] [Server thread/INFO]: View Distance: 10
+[19:53:26] [Server thread/INFO]: Experience Merge Radius: 3.0
+[19:53:26] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[19:53:26] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[19:53:26] [Server thread/INFO]: Clear tick list: false
+[19:53:26] [Server thread/INFO]: Anti X-Ray: true
+[19:53:26] [Server thread/INFO]: 	Engine Mode: 1
+[19:53:26] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[19:53:26] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[19:53:26] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[19:53:26] [Server thread/INFO]: Mob Spawn Range: 4
+[19:53:26] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[19:53:26] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: Cane Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: Melon Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[19:53:26] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[19:53:26] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[19:53:26] [Server thread/INFO]: Random Lighting Updates: false
+[19:53:26] [Server thread/INFO]: Structure Info Saving: true
+[19:53:26] [Server thread/INFO]: Sending up to 10 chunks per packet
+[19:53:26] [Server thread/INFO]: Max TNT Explosions: 100
+[19:53:26] [Server thread/INFO]: Max Entity Collisions: 8
+[19:53:26] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[19:53:27] [Server thread/INFO]: -------- World Settings For [world_nether] --------
+[19:53:27] [Server thread/INFO]: Fix TNT cannons: false
+[19:53:27] [Server thread/INFO]: Water over lava flow speed: 5
+[19:53:27] [Server thread/INFO]: Allow undead horse types to be leashed: false
+[19:53:27] [Server thread/INFO]: Keep spawn chunk loaded: true
+[19:53:27] [Server thread/INFO]: World async lighting: false
+[19:53:27] [Server thread/INFO]: WorldServer TickNextTick cap set at 10000
+[19:53:27] [Server thread/INFO]: WorldServer TickNextTickList cap always processes redstone: false
+[19:53:27] [Server thread/INFO]: Max height for cactus growth 3. Max height for reed growth 3
+[19:53:27] [Server thread/INFO]: Remove invalid mob spawner tile entities: true
+[19:53:27] [Server thread/INFO]: Player blocking damage multiplier set to 0.5
+[19:53:27] [Server thread/INFO]: Squids will spawn between Y: 45.0 and Y: 63.0
+[19:53:27] [Server thread/INFO]: Living Entity Despawn Ranges:  Soft: 32 Hard: 128
+[19:53:27] [Server thread/INFO]: -------- World Settings For [world_the_end] --------
+[19:53:27] [Server thread/INFO]: Item Despawn Rate: 6000
+[19:53:27] [Server thread/INFO]: Item Merge Radius: 2.5
+[19:53:27] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[19:53:27] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[19:53:27] [Server thread/INFO]: View Distance: 10
+[19:53:27] [Server thread/INFO]: Experience Merge Radius: 3.0
+[19:53:27] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[19:53:27] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[19:53:27] [Server thread/INFO]: Clear tick list: false
+[19:53:27] [Server thread/INFO]: Anti X-Ray: true
+[19:53:27] [Server thread/INFO]: 	Engine Mode: 1
+[19:53:27] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[19:53:27] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[19:53:27] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[19:53:27] [Server thread/INFO]: Mob Spawn Range: 4
+[19:53:27] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[19:53:27] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[19:53:27] [Server thread/INFO]: Cane Growth Modifier: 100%
+[19:53:27] [Server thread/INFO]: Melon Growth Modifier: 100%
+[19:53:27] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[19:53:27] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[19:53:27] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[19:53:27] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[19:53:27] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[19:53:27] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[19:53:27] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[19:53:27] [Server thread/INFO]: Random Lighting Updates: false
+[19:53:27] [Server thread/INFO]: Structure Info Saving: true
+[19:53:27] [Server thread/INFO]: Sending up to 10 chunks per packet
+[19:53:27] [Server thread/INFO]: Max TNT Explosions: 100
+[19:53:27] [Server thread/INFO]: Max Entity Collisions: 8
+[19:53:27] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[19:53:27] [Server thread/INFO]: -------- World Settings For [world_the_end] --------
+[19:53:27] [Server thread/INFO]: Fix TNT cannons: false
+[19:53:27] [Server thread/INFO]: Water over lava flow speed: 5
+[19:53:27] [Server thread/INFO]: Allow undead horse types to be leashed: false
+[19:53:27] [Server thread/INFO]: Keep spawn chunk loaded: true
+[19:53:27] [Server thread/INFO]: World async lighting: false
+[19:53:27] [Server thread/INFO]: WorldServer TickNextTick cap set at 10000
+[19:53:27] [Server thread/INFO]: WorldServer TickNextTickList cap always processes redstone: false
+[19:53:27] [Server thread/INFO]: Max height for cactus growth 3. Max height for reed growth 3
+[19:53:27] [Server thread/INFO]: Remove invalid mob spawner tile entities: true
+[19:53:27] [Server thread/INFO]: Player blocking damage multiplier set to 0.5
+[19:53:27] [Server thread/INFO]: Squids will spawn between Y: 45.0 and Y: 63.0
+[19:53:27] [Server thread/INFO]: Living Entity Despawn Ranges:  Soft: 32 Hard: 128
+[19:53:27] [Server thread/INFO]: Preparing start region for level 0 (Seed: 1095926711322546687)
+[19:53:28] [Server thread/INFO]: Preparing spawn area: 50%
+[19:53:28] [Server thread/INFO]: Preparing start region for level 1 (Seed: 1095926711322546687)
+[19:53:29] [Server thread/INFO]: Preparing spawn area: 67%
+[19:53:30] [Server thread/INFO]: Preparing start region for level 2 (Seed: 1095926711322546687)
+[19:53:30] [Server thread/INFO]: [PermissionsEx] Enabling PermissionsEx v1.23.4
+[19:53:30] [Server thread/INFO]: [PermissionsEx] Initializing file backend
+[19:53:30] [Server thread/INFO]: [PermissionsEx] Permissions file successfully reloaded
+[19:53:30] [Server thread/INFO]: [BedwarsRank] Enabling BedwarsRank v1.0
+[19:53:30] [Server thread/WARN]: [BedwarsRank] Default system encoding may have misread config.yml from plugin jar
+[19:53:30] [Server thread/INFO]: [BedwarsRank] 插件已加载
+[19:53:30] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[19:53:30] [Server thread/INFO]: Done (3.826s)! For help, type "help" or "?"
+[19:53:30] [Server thread/INFO]: 未找到名为: 1 的全息投影，自动删除名为:1 的全息投影文件!
+[19:53:31] [Thread-8/ERROR]: [PermissionsEx] dev.bukkit.org rejected the API key provided in plugins/Updater/config.yml
+[19:53:31] [Thread-8/ERROR]: [PermissionsEx] Please double-check your configuration to ensure it is correct.
+[19:53:31] [Thread-8/ERROR]: [PermissionsEx] null
+java.io.IOException: Server returned HTTP response code: 403 for URL: https://api.curseforge.com/servermods/files?projectIds=31279
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source) ~[?:1.8.0_241]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source) ~[?:1.8.0_241]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source) ~[?:1.8.0_241]
+	at ru.tehkode.libs.net.gravitydevelopment.updater.Updater.read(Updater.java:643) [PermissionsEx-1.23.4.jar:?]
+	at ru.tehkode.libs.net.gravitydevelopment.updater.Updater.runUpdater(Updater.java:718) [PermissionsEx-1.23.4.jar:?]
+	at ru.tehkode.libs.net.gravitydevelopment.updater.Updater.access$100(Updater.java:36) [PermissionsEx-1.23.4.jar:?]
+	at ru.tehkode.libs.net.gravitydevelopment.updater.Updater$UpdateRunnable.run(Updater.java:713) [PermissionsEx-1.23.4.jar:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_241]
+[19:53:48] [Thread-9/INFO]: UUID of player xiaoma is 6cddc616-034a-33ce-8a4a-638aa9634059
+[19:53:48] [Server thread/INFO]: xiaoma[/127.0.0.1:50023] logged in with entity id 114 at ([world]-214.30000001192093, 72.58864269421179, 196.56635388350062)
+[19:53:52] [Server thread/INFO]: xiaoma issued server command: /bwr create 1
+[19:53:53] [Server thread/INFO]: xiaoma issued server command: /a
+[19:54:05] [Server thread/INFO]: xiaoma issued server command: /bwr delete 1
+[19:54:07] [Server thread/INFO]: xiaoma issued server command: /a
+[19:54:11] [Server thread/INFO]: xiaoma issued server command: /bwr delete 1
+[19:54:14] [Server thread/INFO]: xiaoma issued server command: /bwr create 1
+[19:54:15] [Server thread/INFO]: xiaoma issued server command: /bwr create 1
+[19:54:22] [Server thread/INFO]: xiaoma issued server command: /kill @e[type=ArmorStand]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 9   null   击杀数: 0   胜场: 0   摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 8   null   击杀数: 0   胜场: 0   摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 10   null   击杀数: 0   胜场: 0   摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 7   null   击杀数: 0   胜场: 0   摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 6   §f李四   §f击杀数: 0   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 5   §f张三   §f击杀数: 0   §f胜场: 2   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 4   §faaaaa   §f击杀数: 0   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 3   §faaa   §f击杀数: 0   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 2   §f无名氏   §f击杀数: 1   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 1   §fxiaoma   §f击杀数: 222   §f胜场: 999   §f摧毁床数: 9999]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 起床战争排行榜]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 起床战争排行榜]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 1   §fxiaoma   §f击杀数: 222   §f胜场: 999   §f摧毁床数: 9999]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 2   §f无名氏   §f击杀数: 1   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 2   §f无名氏   §f击杀数: 1   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 4   §faaaaa   §f击杀数: 0   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 3   §faaa   §f击杀数: 0   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 6   §f李四   §f击杀数: 0   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 4   §faaaaa   §f击杀数: 0   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 8   null   击杀数: 0   胜场: 0   摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 5   §f张三   §f击杀数: 0   §f胜场: 2   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 10   null   击杀数: 0   胜场: 0   摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 起床战争排行榜]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 1   §fxiaoma   §f击杀数: 222   §f胜场: 999   §f摧毁床数: 9999]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 2   §f无名氏   §f击杀数: 1   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 2   §f无名氏   §f击杀数: 1   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 4   §faaaaa   §f击杀数: 0   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 3   §faaa   §f击杀数: 0   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 6   §f李四   §f击杀数: 0   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 4   §faaaaa   §f击杀数: 0   §f胜场: 0   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 8   null   击杀数: 0   胜场: 0   摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 5   §f张三   §f击杀数: 0   §f胜场: 2   §f摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: [xiaoma: Killed 10   null   击杀数: 0   胜场: 0   摧毁床数: 0]
+[19:54:22] [Server thread/INFO]: 未找到名为: 1 的全息投影，自动删除名为:1 的全息投影文件!
+[19:57:55] [Server thread/INFO]: xiaoma issued server command: /kill @e[type=ArmorStand]
+[19:57:56] [Server thread/INFO]: xiaoma issued server command: /kill @e[type=ArmorStand]
+[19:58:00] [Server thread/INFO]: xiaoma issued server command: /gamerule
+[19:58:09] [Server thread/INFO]: xiaoma issued server command: /gamerule sendCommandFeedback true
+[19:58:09] [Server thread/INFO]: [xiaoma: Game rule has been updated]
+[19:58:11] [Server thread/INFO]: xiaoma issued server command: /kill @e[type=ArmorStand]
+[20:03:34] [Server thread/INFO]: xiaoma lost connection: Disconnected
+[20:03:34] [Server thread/INFO]: xiaoma left the game.
+[20:03:37] [Server thread/INFO]: Stopping the server
+[20:03:37] [Server thread/INFO]: Stopping server
+[20:03:37] [Server thread/INFO]: [BedwarsRank] Disabling BedwarsRank v1.0
+[20:03:37] [Server thread/INFO]: [BedwarsRank] 插件已卸载
+[20:03:37] [Server thread/INFO]: [PermissionsEx] Disabling PermissionsEx v1.23.4
+[20:03:37] [Server thread/INFO]: Saving players
+[20:03:37] [Server thread/INFO]: Saving worlds
+[20:03:37] [Server thread/INFO]: Saving chunks for level 'world'/Overworld
+[20:03:38] [Server thread/INFO]: Saving chunks for level 'world_nether'/Nether
+[20:03:38] [Server thread/INFO]: Saving chunks for level 'world_the_end'/The End
