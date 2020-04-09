@@ -51,6 +51,28 @@ public class bedwarsrankcommand implements CommandExecutor {
             }
             //检测子命令是否是help
             if (args[0].equalsIgnoreCase("help")) return false;
+
+            //检测子命令是否为list
+            if (args[0].equalsIgnoreCase("list")) {
+                //检测是否拥有权限
+                if (sender.hasPermission("bedwarsrank.admin.list")){
+                    //声明存放全息投影的文件夹
+                    File Hologram_Folder = new File("plugins\\BedwarsRank\\Hologram_Folder");
+                    //获取所有文件(文件名以全息投影名命名)
+                    File[] Hologram_Folder_List = Hologram_Folder.listFiles();
+                    //断定Hologram_Foler_List不为空
+                    assert Hologram_Folder_List != null;
+                    //检测是否有文件
+                    if (Hologram_Folder_List.length > 0) {
+                        //遍历获取所有文件名
+                        for (File Hologram_name : Hologram_Folder_List) {
+                            sender.sendMessage(ChatColor.DARK_GREEN + "找到的全息投影: " + Hologram_name.getName().replace(".yml",""));
+                        }
+                        //向命令发送者发送没有找到全息投影
+                    }else sender.sendMessage(ChatColor.RED + lang.getString("Nothing"));
+                    //向命令发送者没有全息
+                }else sender.sendMessage(ChatColor.RED + lang.getString("NotPermission"));
+            }
         }
         //检测自变量个数是否为2（即/bedwarsrank create test,/bedwarsrank delete test）
         if (args.length == 2) {
@@ -65,7 +87,7 @@ public class bedwarsrankcommand implements CommandExecutor {
                         Player player = (Player) sender;
                         Location hologram_location = player.getLocation();
                         //检测玩家的y坐标是否够高，否则生成的全息投影可能会有部分在虚空导致死循环从而导致服务器崩溃
-                        if(player.getLocation().getY()>10) {
+                        if (player.getLocation().getY() > 10) {
                             int times = 0;
                             //检测名字是否重复
                             if (!Hologram_File.exists()) {
@@ -119,7 +141,7 @@ public class bedwarsrankcommand implements CommandExecutor {
                                 sender.sendMessage(ChatColor.RED + lang.getString("NameExists"));
                             }
                             //提示你的坐标y太低
-                        }else sender.sendMessage(ChatColor.RED + "创建失败，你的坐标y太低了");
+                        } else sender.sendMessage(ChatColor.RED + "创建失败，你的坐标y太低了");
                         //提示该命令只有玩家可以执行
                     } else sender.sendMessage(ChatColor.RED + lang.getString("NotPlayer"));
                     //提示没有权限

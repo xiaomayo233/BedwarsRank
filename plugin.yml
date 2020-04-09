@@ -13,4 +13,28 @@ commands:
       §2/<command> help 查看帮助
       §2/<command> create <名字> 创建一个全息投影
       §2/<command> delete <名字> 删除一个全息投影
+      §2/<command> list 列出所有的全息投影
       §2/rank 查看起床战争排行榜
+permissions:
+  bedwarsrank.admin.*:
+    description: 给予玩家所有的bedwarsrank管理员权限
+    children:
+      bedwarsrank.admin.reload: true
+      bedwarsrank.admin.create: true
+      bedwarsrank.admin.delete: true
+      bedwarsrank.admin.list: true
+  bedwarsrank.admin.reload:
+    description: 允许你重载插件
+    default: op
+  bedwarsrank.admin.create:
+    description: 允许你创建一个全息投影
+    default: op
+  bedwarsrank.admin.delete:
+    description: 允许你删除一个全息投影
+    default: op
+  bedwarsrank.admin.list:
+    description: 允许你列出所有全息投影
+    default: op
+  bedwarsrank.basic.rank:
+    description: 允许你打开/rank的GUI界面
+    default: true

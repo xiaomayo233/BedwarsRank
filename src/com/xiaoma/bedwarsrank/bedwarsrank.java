@@ -52,6 +52,7 @@ public class bedwarsrank
                 lang.set("DeleteSuccess","删除成功");
                 lang.set("DeleteFail","名为: %hologram_name% 的全息投影不存在");
                 lang.set("NotPermission","你没有使用该命令的权限");
+                lang.set("Nothing","未找到任何全息投影");
                 //保存数据
                 lang.save(langfile);
 

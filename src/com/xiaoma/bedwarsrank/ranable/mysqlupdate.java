@@ -57,6 +57,9 @@ public class mysqlupdate extends BukkitRunnable {
             ResultSet rs = st.executeQuery("SELECT kills,name,wins,destroyedBeds from bwstats_players ORDER BY " + type + " DESC");
             //声明变量
             item = new ArrayList<>();
+
+            int times = 0;
+
             //获取MySQL里的信息
             while (rs.next()) {
                 int kills = rs.getInt("kills");
@@ -64,18 +67,17 @@ public class mysqlupdate extends BukkitRunnable {
                 String name = rs.getString("name");
                 int destroyedBeds = rs.getInt("destroyedBeds");
                 //设置/rank排行榜的物品信息
-                ItemStack num = new ItemStack(Material.SKULL_ITEM, 1);
-                ItemMeta num_meta = num.getItemMeta();
-                num_meta.setDisplayName(ChatColor.WHITE + name);
-                ArrayList<String> num_meta_lore = new ArrayList<>();
-                num_meta_lore.add(ChatColor.BLUE + killsmsg + ": " + kills);
-                num_meta_lore.add(ChatColor.BLUE + winsmsg + ": " + wins);
-                num_meta_lore.add(ChatColor.BLUE + destroyedBedsmsg + ": " + destroyedBeds);
-                num_meta.setLore(num_meta_lore);
-                num.setDurability(Short.parseShort("3"));
-                num.setItemMeta(num_meta);
+                ItemStack num = setitem(name,kills,wins,destroyedBeds);
                 //添加到列表里
                 item.add(num);
+                times+=1;
+            }
+            while(times<10){
+                //设置/rank排行榜的物品信息补白
+                ItemStack num = setitem("null",0,0,0);
+                //添加到列表里
+                item.add(num);
+                times+=1;
             }
             //创建GUI
             gui = Bukkit.createInventory(null, 45, ChatColor.BLACK + lang.getString("RankGUIName"));
@@ -143,6 +145,8 @@ public class mysqlupdate extends BukkitRunnable {
                     while (times < item.size()) {
                         //声明一个位置，这个位置是全息投影的创建位置
                         Location Hologram_Location = new Location(Hologram_Location_World, Hologram_Location_X, Hologram_Location_Y, Hologram_Location_Z);
+                        //加载区块，否则下面的是无法获取任何实体
+                        Hologram_Location.getChunk().load(true);
                         //获得半径为1个方块内的所有实体
                         Collection<? extends Entity> entities = Hologram_Location_World.getNearbyEntities(Hologram_Location, 1.0, 1.0, 1.0);
                         //遍历实体
@@ -151,7 +155,7 @@ public class mysqlupdate extends BukkitRunnable {
                             if (entity instanceof ArmorStand || entity instanceof Player) {
                                 try {
                                     //对信息为空的盔甲架进行过滤
-                                    if (!entity.getCustomName().equals(times + 1 + "   null   "+lang.getString("kills")+": 0   "+lang.getString("wins")+": 0   "+lang.getString("destroyedBeds")+": 0") && entity.getCustomName() != null) {
+                                    if (!entity.getCustomName().equals(times + 1 + "   null   " + lang.getString("kills") + ": 0   " + lang.getString("wins") + ": 0   " + lang.getString("destroyedBeds") + ": 0") && entity.getCustomName() != null) {
                                         //获取实体位置
                                         World Entity_Location_World = entity.getLocation().getWorld();
                                         double Entity_Location_X = entity.getLocation().getX();
@@ -173,14 +177,39 @@ public class mysqlupdate extends BukkitRunnable {
                                 }
                             }
                         }//如果检测不到全息投影则删除文件防止死循环导致服务器崩溃(测试的时候就崩了好几次)
-                        if(times==0){
+                        if (times == 0) {
                             Hologram_name.delete();
-                            System.out.println("未找到名为: " + Hologram_name.getName().replace(".yml", " ") + "的全息投影，自动删除名为:"+Hologram_name.getName().replace(".yml", " ")+"的全息投影文件!");
-                            times  = 10;
+                            System.out.println("未找到名为: " + Hologram_name.getName().replace(".yml", " ") + "的全息投影，自动删除名为:" + Hologram_name.getName().replace(".yml", " ") + "的全息投影文件!");
+                            times = 10;
                         }
                     }
                 }
             }
         }
+    }
+    private ItemStack setitem(String name,int kills,int wins,int destroyedBeds){
+
+        //声明lang.yml（每次都说好累）
+        File langfile = new File("plugins\\BedwarsRank", "lang.yml");
+        YamlConfiguration lang = YamlConfiguration.loadConfiguration(langfile);
+
+        //获得lang.yml文件里的信息
+        String killsmsg = lang.getString("kills");
+        String winsmsg = lang.getString("wins");
+        String destroyedBedsmsg = lang.getString("destroyedBeds");
+
+        //设置物品补白
+        ItemStack num = new ItemStack(Material.SKULL_ITEM, 1);
+        ItemMeta num_meta = num.getItemMeta();
+        num_meta.setDisplayName(ChatColor.WHITE + name);
+        ArrayList<String> num_meta_lore = new ArrayList<>();
+        num_meta_lore.add(ChatColor.BLUE + killsmsg + ": " + kills);
+        num_meta_lore.add(ChatColor.BLUE + winsmsg + ": " + wins);
+        num_meta_lore.add(ChatColor.BLUE + destroyedBedsmsg + ": " + destroyedBeds);
+        num_meta.setLore(num_meta_lore);
+        num.setDurability(Short.parseShort("3"));
+        num.setItemMeta(num_meta);
+
+        return num;
     }
 }
