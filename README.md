@@ -3,7 +3,7 @@
 + 由于我在各大网站未找到免费的插件
 + 所以我就自己去写了一个
 - 使用方法:
-- 将子服的BedwarsReload的MySQL打开
-- 设置好BedwarsReload的MySQL数据库信息
-- 然后设置BedwarsRank的信息与BedwarsReload的MySQL信息一致(table除外)
+- 将子服的BedwarsRel的MySQL打开
+- 设置好BedwarsRel的MySQL数据库信息
+- 然后设置BedwarsRank的信息与BedwarsRel的MySQL信息一致(table除外)
 - 然后重启服务器
