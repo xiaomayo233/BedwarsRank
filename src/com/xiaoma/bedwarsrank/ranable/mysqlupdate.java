@@ -32,29 +32,30 @@ public class mysqlupdate extends BukkitRunnable {
         //加载lang.yml文件
         YamlConfiguration lang = YamlConfiguration.loadConfiguration(langfile);
 
-        //获得lang.yml文件里的信息
-        String killsmsg = lang.getString("kills");
-        String winsmsg = lang.getString("wins");
-        String destroyedBedsmsg = lang.getString("destroyedBeds");
+        String color = config.getString("color");
 
-        //获得config.yml文件里的信息
-        String host = config.getString("host");
-        int port = config.getInt("port");
-        String database = config.getString("database");
-        String url = host + ":" + port + "/" + database;
-        String user = config.getString("user");
-        String password = config.getString("password");
-        String type = config.getString("type");
 
-        //JDBC连接数据库
         try {
+            //获得config.yml文件里的信息
+            String host = config.getString("host");
+            int port = config.getInt("port");
+            String database = config.getString("database");
+            boolean SSL = config.getBoolean("useSSL");
+            String url = host + ":" + port + "/" + database + "?useSSL=" + SSL;
+            String user = config.getString("user");
+            String password = config.getString("password");
+            String type = config.getString("type");
+            String table = config.getString("table");
+
+
+            //JDBC连接数据库
             //加载JDBC驱动
             Class.forName("com.mysql.jdbc.Driver");
             //进行连接
             Connection conn = DriverManager.getConnection("jdbc:mysql://" + url, user, password);
             Statement st = conn.createStatement();
             //发送MySQL的查询信息和排名的语句
-            ResultSet rs = st.executeQuery("SELECT kills,name,wins,destroyedBeds from bwstats_players ORDER BY " + type + " DESC");
+            ResultSet rs = st.executeQuery("SELECT kills,name,wins,destroyedBeds from "+table+" ORDER BY " + type + " DESC");
             //声明变量
             item = new ArrayList<>();
 
@@ -93,7 +94,7 @@ public class mysqlupdate extends BukkitRunnable {
             if(item.size()>=9) gui.setItem(41, item.get(8));
             if(item.size()>=10) gui.setItem(42, item.get(9));
             //调用方法(我不怎么用方法，这里是因为我觉得塞进来很乱(这里本来就很乱(括号套娃真好玩)))
-            hologram_update();
+            hologram_update(color);
             //关闭与MySQL的连接
             rs.close();
             st.close();
@@ -110,12 +111,12 @@ public class mysqlupdate extends BukkitRunnable {
                 } catch(Exception ignored){
                 }
             }
-        } catch (SQLException ignored) {
+        } catch (SQLException | ClassNotFoundException ignored) {
             System.out.println("数据库连接失败");
-        } catch (ClassNotFoundException ignored) {
+            Bukkit.getPluginManager().disablePlugin(Bukkit.getPluginManager().getPlugin("BedwarsRank"));
         }
     }
-    private void hologram_update(){
+    private void hologram_update(String color){
         //加载lang.yml文件(别问我为什么不用全局变量，后来出问题才改成这样的)
         File langfile = new File("plugins\\BedwarsRank\\", "lang.yml");
         YamlConfiguration lang = YamlConfiguration.loadConfiguration(langfile);
@@ -124,7 +125,7 @@ public class mysqlupdate extends BukkitRunnable {
         File Hologram_Folder = new File("plugins\\BedwarsRank\\Hologram_Folder");
         //获取所有文件(文件名以全息投影名命名)
         File[] Hologram_Folder_List = Hologram_Folder.listFiles();
-        //断定Hologram_Foler_List不为空
+        //断言Hologram_Foler_List不为空
         assert Hologram_Folder_List != null;
         //检测是否有文件
         if(Hologram_Folder_List.length>0) {
@@ -155,7 +156,7 @@ public class mysqlupdate extends BukkitRunnable {
                             if (entity instanceof ArmorStand || entity instanceof Player) {
                                 try {
                                     //对信息为空的盔甲架进行过滤
-                                    if (!entity.getCustomName().equals(times + 1 + "   null   " + lang.getString("kills") + ": 0   " + lang.getString("wins") + ": 0   " + lang.getString("destroyedBeds") + ": 0") && entity.getCustomName() != null) {
+                                    if (!entity.getCustomName().equals(color + times + 1 + "   null   " + lang.getString("kills") + ": 0   " + lang.getString("wins") + ": 0   " + lang.getString("destroyedBeds") + ": 0") && entity.getCustomName() != null) {
                                         //获取实体位置
                                         World Entity_Location_World = entity.getLocation().getWorld();
                                         double Entity_Location_X = entity.getLocation().getX();
@@ -163,12 +164,12 @@ public class mysqlupdate extends BukkitRunnable {
                                         double Entity_Location_Z = entity.getLocation().getZ();
                                         //检测实体是否符合要求
                                         if (Entity_Location_World == Hologram_Location_World & Entity_Location_X == Hologram_Location_X & Entity_Location_Y == Hologram_Location_Y & Entity_Location_Z == Hologram_Location_Z) {
-                                            String name = item.get(times).getItemMeta().getDisplayName().replace("\u00a79", "\u00a7f");
-                                            String kills = item.get(times).getItemMeta().getLore().get(0).replace("\u00a79", "\u00a7f");
-                                            String wins = item.get(times).getItemMeta().getLore().get(1).replace("\u00a79", "\u00a7f");
-                                            String destroyedBeds = item.get(times).getItemMeta().getLore().get(2).replace("\u00a79", "\u00a7f");
-                                            entity.setCustomName(times + 1 + "   " + name + "   " + kills + "   " + wins + "   " + destroyedBeds);
+                                            String name = item.get(times).getItemMeta().getDisplayName().replace("§f", "");
+                                            String kills = item.get(times).getItemMeta().getLore().get(0).replace("§9", "");
+                                            String wins = item.get(times).getItemMeta().getLore().get(1).replace("§9", "");
+                                            String destroyedBeds = item.get(times).getItemMeta().getLore().get(2).replace("§9", "");
                                             times += 1;
+                                            entity.setCustomName(color + times + "   " + name + "   " + kills + "   " + wins + "   " + destroyedBeds);
                                             //y向下减继续更新全息投影的信息直到循环结束
                                             Hologram_Location_Y -= 0.5F;
                                         }

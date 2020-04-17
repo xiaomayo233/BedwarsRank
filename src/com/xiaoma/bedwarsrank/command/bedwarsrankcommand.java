@@ -26,8 +26,15 @@ public class bedwarsrankcommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         //声明lang.yml的位置
         File langfile = new File("plugins\\BedwarsRank\\", "lang.yml");
+        //声明config.yml文件路径
+        File configfile = new File("plugins\\BedwarsRank", "config.yml");
         //加载lang.yml文件
         YamlConfiguration lang = YamlConfiguration.loadConfiguration(langfile);
+        //加载config.yml文件
+        YamlConfiguration config = YamlConfiguration.loadConfiguration(configfile);
+        //获取颜色代码
+        String color = config.getString("color").replace("&","§");
+
         //判断命令
         //如果自变量个数等于0（既/bedwarsrank）则返回命令的使用方法
         if (args.length == 0) return false;
@@ -39,7 +46,7 @@ public class bedwarsrankcommand implements CommandExecutor {
                 if (sender.hasPermission("bedwarsrank.admin.reload")) {
                     //检测是否是玩家
                     if (sender instanceof Player) {
-                        //是玩家则发送已重载（没有实际作用，只是想让控制台看起来更整洁）
+                        //是玩家则发送已重载（没有实际作用）
                         sender.sendMessage(ChatColor.DARK_GREEN + lang.getString("PluginReload"));
                         return true;
                     }
@@ -116,11 +123,11 @@ public class bedwarsrankcommand implements CommandExecutor {
                                     if (times >= 1) {
                                         //从rankgui的item列表中获取排行榜信息
                                         String name = mysqlupdate.item.get(times - 1).getItemMeta().getDisplayName();
-                                        String kills = mysqlupdate.item.get(times - 1).getItemMeta().getLore().get(0).replace("§9", "§f");
-                                        String wins = mysqlupdate.item.get(times - 1).getItemMeta().getLore().get(1).replace("§9", "§f");
-                                        String destroyedBeds = mysqlupdate.item.get(times - 1).getItemMeta().getLore().get(2).replace("§9", "§f");
+                                        String kills = mysqlupdate.item.get(times - 1).getItemMeta().getLore().get(0).replace("§9", "");
+                                        String wins = mysqlupdate.item.get(times - 1).getItemMeta().getLore().get(1).replace("§9", "");
+                                        String destroyedBeds = mysqlupdate.item.get(times - 1).getItemMeta().getLore().get(2).replace("§9", "");
                                         //设置排行榜信息
-                                        hologram.setCustomName(times + "   " + name + "   " + kills + "   " + wins + "   " + destroyedBeds);
+                                        hologram.setCustomName(color +times + "   " + name + "   " + kills + "   " + wins + "   " + destroyedBeds);
                                     }
                                     //y向下减循环创建
                                     hologram_location.setY(hologram_location.getY() - 0.5F);
@@ -131,7 +138,7 @@ public class bedwarsrankcommand implements CommandExecutor {
                                 //对数据库为满10人的空缺位置进行空白补全
                                 while (times < 11) {
                                     ArmorStand hologram = (ArmorStand) hologram_location.getWorld().spawnEntity(hologram_location, EntityType.ARMOR_STAND);
-                                    hologram.setCustomName(times + "   null   " + lang.getString("kills") + ": 0   " + lang.getString("wins") + ": 0   " + lang.getString("destroyedBeds") + ": 0");
+                                    hologram.setCustomName(color +times + "   null   " + lang.getString("kills") + ": 0   " + lang.getString("wins") + ": 0   " + lang.getString("destroyedBeds") + ": 0");
                                     setArmorStand(hologram);
                                     hologram_location.setY(hologram_location.getY() - 0.5F);
                                     times += 1;
